@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-image: url(./img/gradient.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    font-size: 16px;
+
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border-top: 2.5px solid rgba(255,255,255,0.3);
+    border-left: 2.5px solid rgba(255,255,255,0.3);
+    border-bottom: 2.5px solid rgba(255,255,255,0.1);
+    padding:5% 15%;
+}
+.About{
+    display: flex;
+}
+.d-flex{
+    display:flex;
+    width: 100%;
+}
+.photo-div{
+ width: 40%;
+}
+.photo-pic {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+.info{
+    width: 60%;
+    height: 240px;
+}
+.info h2{
+    font-size:1.25rem;
+    line-height: 30px;
+}
+.info p{
+    font-size: 1rem;
+    line-height: 50px;
+}
+
+
+.intro{
+    width: 100%;
+}
+.experience{
+    box-sizing: border-box;
+    width: 40%;
+    
+}
+.experience ul{
+    margin-left: 18px;
+    margin-bottom: 32px;
+}
+.experience ul li{
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    width: 60%;
+}
+.list{
+    display: flex;
+    margin-top: 20px;
+    height: 60%;
+    
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 36%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    
+}
+.item:nth-child(1),.item:nth-child(2){
+    margin-right: 3vw;
+}
+.item:hover{
+    box-shadow: 0 5px 15px rgba(25, 0, 0, 0.2) ;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.item img{
+    width: 40%;
+    height: auto;
+    margin-bottom: 2px;
+}
+.project .d-flex{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.project a{
+    align-items: center;
+    justify-self: end;
+    align-self: flex-end;
+    text-decoration: none;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 40px;    
+    padding: 2px 5px;
+    width: 20%;
+    height: 100%;
+}
+.project a:hover{
+    box-shadow: 0 2px 6px rgba(25, 0, 0, 0.2) ;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+@media screen and (max-width:992px) {
+    body{
+        letter-spacing: 1px;
+    }
+
+    .info{
+        height: 200px;
+    }
+.info h2{
+    font-size:1rem;
+}
+.info p{
+font-size: 0.8rem;
+line-height: 30px;
+}
+.card{
+    padding:10% 10%;
+}
+
+
+.experience{
+    font-size: 0.8rem;
+}
+.item{
+    width: 50%;
+    height: 100%;
+    
+}
+.item:nth-child(1),.item:nth-child(2){
+    margin-right: 2vw;
+}
+.project{
+    position: relative;
+}
+
+.list{
+    margin-bottom: 20px;
+}
+
+.project a{
+    box-sizing: border-box;
+    height: 100%;
+    width: 40%;
+    
+}
+.list{
+    display: flex;
+    margin-top: 20px;
+    height: 36%;
+}
+}
+@media screen and (max-width:576px){
+    .card{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 80%;
+    box-sizing: border-box;
+    padding-top: 25%;
+    }
+
+    .About{
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+
+    }
+    .info{
+        line-height: 20px;
+        height: 150px;
+    }
+    .photo-div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .intro{
+        flex-direction: column;
+        align-content: center;
+        
+    }
+    .list{
+        justify-content: space-between;
+    }
+    .experience{
+        height: 36%;
+        width: 100%;
+    }
+    .experience li{
+        font-size: 0.3rem;
+    }
+    .list{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .item{
+        width: 30%;
+        
+    }
+    .item:nth-child(1),.item:nth-child(2),.item:nth-child(3){
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .project{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .project .d-flex{
+        justify-content: center;
+        align-items: center;
+        height: 15%;
+    }
+    
+    .project a{
+        height: 60%;
+        width: 30%;
+        position: relative;
+    }
+}
+
+

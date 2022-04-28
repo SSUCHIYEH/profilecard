@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>profilecardt</title>
+</head>
+
+<body>
+    <H1>看consolelog</H1>
+    <button onclick="test()">click</button>
+    <!-- <div class="container">
+        <div class="card">
+            <div class="About d-flex">
+                <div class="photo-div">
+                    <img class="photo-pic" src="./img/photo.jpg">
+                </div>
+                <div class="info">
+                    <h2>葉司淇</h2>
+                    <p>國立臺北教育大學 - 玩具與遊戲設計研究所<br>hyoka4654@gmail.com<br>0953-278-316</p>
+                </div>
+
+            </div>
+            <div class="intro d-flex">
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <ul>
+                        <li>2019 App應用創新競賽 - 入圍</li>
+                        <li>2020 App應用創新競賽 - 入圍</li>
+                        <li>2021 金點新秀獎 - 入圍</li>
+                    </ul>
+                </div>
+
+
+                <div class="project">
+                    <h2>Project</h2>
+                    <div class="list">
+                        <div class="item">
+                            <img src="./img/game.png">
+                            <p>遊戲</p>
+                        </div>
+                        <div class="item">
+                            <img src="./img/web.png">
+                            <p>網頁</p>
+                        </div>
+                        <div class="item">
+                            <img src="./img/app.png">
+                            <p>App</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#">作品集</a>
+                    </div>
+                                        
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script>
+        const myPromise = Promise.resolve(Promise.resolve("Promise!"));
+        const myromise = Promise.resolve(Promise.resolve("Promise"));
+
+        function One() {
+            myPromise.then(res => res).then(res => console.log(res));
+            setTimeout(() => console.log("Timeout", 10));
+            console.log("Last Time");
+        }
+
+        async function Two() {
+            const res = await myromise;
+            console.log(await res);
+            setTimeout(() => console.log("Timeout", 2));
+            console.log("Last line!")
+        }
+        function test() {
+            One();
+            Two();
+        }
+
+        let mingRunPromise = (someone) => {
+            let ran = parseInt(Math.random() * 2); // 隨機成功或失敗
+            console.log(`${someone} 開始跑開始`);
+            return new Promise((resolve, reject) => {
+                // 傳入 resolve 與 reject，表示資料成功與失敗
+                if (ran) {
+                    setTimeout(function () {
+                        // 3 秒時間後，透過 resolve 來表示完成
+                        resolve(`${someone} 跑 3 秒時間(fulfilled)`);
+                    }, 3000);
+                } else {
+                    // 回傳失敗
+
+                    reject(new Error(`${someone} 跌倒失敗(rejected)`))
+                }
+            });
+        }
+        function test2(){
+        mingRunPromise('小明').then((data) => {
+            // 成功訊息 (需要 3 秒)
+            console.log(data);
+        }).catch((err) => {
+            // 失敗訊息 (立即)
+            console.log(err)
+        });
+    }
+    </script>
+</body>
+
+</html>
